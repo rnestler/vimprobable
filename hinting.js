@@ -9,8 +9,8 @@ function Hints() {
     var config = {
         maxAllowedHints: 500,
         hintCss: "z-index:100000;font-family:monospace;font-size:10px;"
-               + "font-weight:bold;color:white;background-color:red;"
-               + "padding:0px 1px;position:absolute;",
+               + "font-weight:bold;color:#000;background-color:#fff;"
+               + "padding:0px 1px;position:absolute;border:1px solid #444;opacity:0.8;",
         hintClass: "hinting_mode_hint",
         hintClassFocus: "hinting_mode_hint_focus",
         elemBackground: "#ff0",

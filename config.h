@@ -44,7 +44,7 @@ static const char *completionbgcolor[]  = { "#ffffff",              "#ffffff",  
 static const char statusfont[]          = "monospace bold 8";   /* font for status bar */
 #define             ENABLE_HISTORY_INDICATOR
 #define             ENABLE_INCREMENTAL_SEARCH
-#define             ENABLE_GTK_PROGRESS_BAR
+/*#define             ENABLE_GTK_PROGRESS_BAR */
 #define             ENABLE_WGET_PROGRESS_BAR
 static const int progressbartick        = 20;
 static const char progressborderleft    = '[';
