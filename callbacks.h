@@ -7,6 +7,9 @@
     see LICENSE file
 */
 
+#ifndef VP_CALLBACKS_H
+#define VP_CALLBACKS_H
+
 #include "includes.h"
 
 void webview_scroll_cb(GtkAdjustment * adjustment, gpointer user_data);
@@ -14,3 +17,5 @@ gboolean webview_navigation_cb(WebKitWebView * webview, WebKitWebFrame * frame,
 			       WebKitNetworkRequest * request,
 			       WebKitWebPolicyDecision * decision,
 			       gpointer user_data);
+
+#endif

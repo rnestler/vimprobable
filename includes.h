@@ -6,6 +6,8 @@
     (c) 2010 by Thomas Adam
     see LICENSE file
 */
+#ifndef VP_INCLUDES_H
+#define VP_INCLUDES_H
 
 #include <stdlib.h>
 #include <string.h>
@@ -17,3 +19,5 @@
 #include <webkit/webkit.h>
 #include <libsoup/soup.h>
 #include <JavaScriptCore/JavaScript.h>
+
+#endif

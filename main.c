@@ -9,23 +9,7 @@
     see LICENSE file
 */
 
-#include <X11/Xlib.h>
-#include "includes.h"
-#include "vimprobable.h"
-#include "utilities.h"
-#include "callbacks.h"
-#include "javascript.h"
-
-/* the CLEAN_MOD_*_MASK defines have all the bits set that will be stripped from the modifier bit field */
-#define CLEAN_MOD_NUMLOCK_MASK (GDK_MOD2_MASK)
-#define CLEAN_MOD_BUTTON_MASK (GDK_BUTTON1_MASK|GDK_BUTTON2_MASK|GDK_BUTTON3_MASK|GDK_BUTTON4_MASK|GDK_BUTTON5_MASK)
-
-/* remove unused bits, numlock symbol and buttons from keymask */
-#define CLEAN(mask) (mask & (GDK_MODIFIER_MASK) & ~(CLEAN_MOD_NUMLOCK_MASK) & ~(CLEAN_MOD_BUTTON_MASK))
-
-#define IS_ESCAPE(event) (IS_ESCAPE_KEY(CLEAN(event->state), event->keyval))
-#define IS_ESCAPE_KEY(s, k) ((s == 0 && k == GDK_Escape) || \
-        (s == GDK_CONTROL_MASK && k == GDK_bracketleft))
+#include "main.h"
 
 /* callbacks here */
 static void inputbox_activate_cb(GtkEntry *entry, gpointer user_data);
@@ -56,7 +40,6 @@ static gboolean browser_settings(const Arg *arg);
 static gboolean commandhistoryfetch(const Arg *arg);
 static gboolean complete(const Arg *arg);
 static gboolean descend(const Arg *arg);
-gboolean echo(const Arg *arg);
 static gboolean focus_input(const Arg *arg);
 static gboolean input(const Arg *arg);
 static gboolean navigate(const Arg *arg);
@@ -92,16 +75,7 @@ static void set_widget_font_and_color(GtkWidget *widget, const char *font_str,
 
 static gboolean history(void);
 static gboolean process_set_line(char *line);
-void save_command_history(char *line);
-void toggle_proxy(gboolean onoff);
-void toggle_scrollbars(gboolean onoff);
-
-gboolean process_keypress(GdkEventKey *event);
-void fill_suggline(char * suggline, const char * command, const char *fill_with);
-GtkWidget * fill_eventbox(const char * completion_line);
 static void mop_up(void);
-
-#include "main.h"
 
 /* variables */
 static GtkWindow *window;

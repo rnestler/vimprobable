@@ -7,6 +7,9 @@
     see LICENSE file
 */
 
+#ifndef VP_UTILITIES_H
+#define VP_UTILITIES_H
+
 /* config file */
 #define             RCFILE                      "%s/vimprobable/vimprobablerc", config_base
 
@@ -34,3 +37,5 @@ void free_list(Listelement *elementlist);
 enum ConfigFileError read_searchengines(const char *filename);
 char *find_uri_for_searchengine(const char *handle);
 void make_searchengines_list(Searchengine *searchengines, int length);
+
+#endif

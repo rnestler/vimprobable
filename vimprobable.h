@@ -7,6 +7,9 @@
     see LICENSE file
 */
 
+#ifndef VP_VIMPROBABLE_H
+#define VP_VIMPROBABLE_H
+
 /* macros */
 #define LENGTH(x)                   (sizeof(x)/sizeof(x[0]))
 
@@ -188,3 +191,5 @@ enum ConfigFileError {
 
 /* completion list size */
 #define             MAX_LIST_SIZE               40
+
+#endif
