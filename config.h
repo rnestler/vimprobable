@@ -106,9 +106,11 @@ static Searchengine searchengines[] = {
     { "wd",         "https://secure.wikimedia.org/wikipedia/de/w/index.php?title=Special%%3ASearch&search=%s&go=Go" },
     { "d",          "https://duckduckgo.com/?q=%s&t=Vimprobable" },
     { "dd",         "https://duckduckgo.com/html/?q=%s&t=Vimprobable" },
+    { "leo",        "http://dict.leo.org/?search=%s" },
+    { "g",          "https://www.google.ch/search?q=%s" },
 };
 
-static char defaultsearch[MAX_SETTING_SIZE] = "i";
+static char defaultsearch[MAX_SETTING_SIZE] = "g";
 
 /* command mapping */
 Command commands[COMMANDSIZE] = {
